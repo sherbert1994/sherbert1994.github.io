@@ -64,8 +64,8 @@ header {
 .monsters {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
     max-width: 100%;
+    grid-gap: 1rem;
 }
 
 .monsters :nth-child(5){
@@ -73,7 +73,6 @@ header {
 }
 
 .monsterInfo {
-    flex: 1;
     border: 2px dotted #ccc;
     text-align: center;
     padding: 1em;
@@ -103,6 +102,35 @@ header {
 .interessanteInfoContainer {
     display: flex;
     flex-direction: column;
+}
+
+.gameList {
+    width: 100%;
+}
+
+.gameListTitle {
+    font-style: italic;
+    list-style: none;
+}
+
+.gameTitle {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.gameTitle:before {
+    content: '';
+    display: inline-block;
+    background-image: url("/images/external-link.png");
+    background-size: cover;
+    width: 1em;
+    height: 1em;
+}
+
+.gameDescription {
+    font-weight: normal;
+    font-style: normal;
+    margin: 0.3em 0 1em;
 }
 
 footer {
@@ -152,5 +180,9 @@ footer a:hover {
 
     .interessanteInfoContainer {
         flex-direction: row;
+    }
+
+    .gameList {
+        width: 50%;
     }
 }
