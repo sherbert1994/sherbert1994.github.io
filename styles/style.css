@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, "Courier New", sans-serif;
+    color: #292929;
+    background: url("/images/chips_challenge.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin:0;
+}
+
+header {
+    width: 100%;
+    color: white;
+    padding: 1rem 0;
+    background-color: #292929;
+    text-align: center;
+}
+
+#pageTitle {
+    margin-top: 0;
+}
+
+.navList {
+    margin:0;
+}
+
+.navList > li {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.headerNav {
+    color: white;
+    text-decoration: none;
+}
+
+.headerNav:hover {
+    text-decoration: underline;
+}
+
+.Inhoud {
+    margin: 2rem auto;
+    width: 90%;
+    padding: 1rem;
+}
+
+.inhoudKader {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+}
+
+.sectionTitle {
+    border-bottom: 2px solid #292929;
+    padding-bottom: 0.5rem;
+}
+
+.description:first-letter {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.monsters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    max-width: 100%;
+}
+
+.monsters :nth-child(5){
+    display: none;
+}
+
+.monsterInfo {
+    flex: 1;
+    border: 2px dotted #ccc;
+    text-align: center;
+    padding: 1em;
+}
+
+.monsterInfo:first-child, .monsterInfo:nth-child(4){
+    background-color: #dfdfdf;
+}
+
+.spelInformatie {
+    width: 100%;
+}
+
+.spelInformatie th, .spelInformatie td{
+    border-bottom: 1px dotted #aaa;
+    padding: 0.2em 1em;
+    text-align: left;
+}
+
+.tableFooter td{
+    font-size: 0.6rem;
+    text-align: right;
+    /* Niet expliciet gevraagd in de opdracht, maar is wel het geval in de voorbeeldafbeeldingen*/
+    border-bottom: none;
+}
+
+.interessanteInfoContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #a7a5a5;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 0.25rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ce0000;
+    text-decoration: none;
+    width: 100%;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width:992px) {
+    .Inhoud{
+        width: 80%;
+    }
+
+    .monsters {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        max-width: 100%;
+    }
+
+    .monsters :nth-child(5){
+        display: revert;
+    }
+
+    .monsterInfo:nth-child(odd){
+        background-color: #dfdfdf;
+    }
+
+    .monsterInfo:nth-child(even){
+        background-color: white;
+    }
+
+    .interessanteInfoContainer {
+        flex-direction: row;
+    }
+}
